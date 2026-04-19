@@ -1,0 +1,6 @@
+{
+  "name": "My Travel",
+  "description": "وكالة سفر متكاملة تقدم خدمات حجز الرحلات، معلومات التأشيرة، ودعم ذكاء اصطناعي عبر Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
