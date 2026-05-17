@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       destinations: "Destinations",
       visaInfo: "Visa Info",
+      services: "Services",
       bookNow: "Book Now"
     },
     hero: {
@@ -125,6 +126,42 @@ export const translations = {
       hours: "Sat - Thu: 09:00 - 18:00",
       rights: "All rights reserved."
     },
+    services: {
+      title: "Our Services",
+      learnMore: "Learn more",
+      items: [
+        {
+          title: "Voyage à la Carte",
+          desc: "«Your trip, your rules!» Customize every detail according to your preferences...",
+          image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Transfer and Excursion",
+          desc: "LAYA TRAVEL warmly welcomes you at the airport and ensures your transfer to your accommodation.",
+          image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Visa and E-Visa Processing",
+          desc: "LAYA TRAVEL facilitates the administrative procedures to obtain your visas as quickly as possible.",
+          image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Omra Service",
+          desc: "LAYA TRAVEL organizes your sacred Omra trip with our guides ....",
+          image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Ticketing Service",
+          desc: "LAYA TRAVEL ensures your flight ticket reservation...",
+          image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Organized Trip",
+          desc: "LAYA TRAVEL opens horizons for you to explore the world",
+          image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
+    },
     tripData: {},
     visaData: {
       turkey: {
@@ -136,6 +173,7 @@ export const translations = {
     nav: {
       destinations: "Destinations",
       visaInfo: "Infos Visa",
+      services: "Services",
       bookNow: "Réserver"
     },
     hero: {
@@ -256,6 +294,42 @@ export const translations = {
       hours: "Sam - Jeu : 09:00 - 18:00",
       rights: "Tous droits réservés."
     },
+    services: {
+      title: "Nos services",
+      learnMore: "En savoir plus",
+      items: [
+        {
+          title: "Voyage à la Carte",
+          desc: "«Votre voyage, vos règles !» Personnalisez chaque détail selon vos préférences...",
+          image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Transfert et Excursion",
+          desc: "LAYA TRAVEL vous accueille chaleureusement à l’aéroport et assure votre transfert vers votre hébergement.",
+          image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Traitement de Dossier Visa et E-Visa",
+          desc: "LAYA TRAVEL vous facilite les démarches administratives pour obtenir vos visas dans les meilleurs délais.",
+          image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Service Omra",
+          desc: "LAYA TRAVEL Organise votre voyage sacré d'Omra avec nos guides ....",
+          image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Service Billetterie",
+          desc: "LAYA TRAVEL vous assure une réservation des billets d’avion...",
+          image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "Voyage Organisé",
+          desc: "LAYA TRAVEL vous ouvre les horizons pour explorer le monde",
+          image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
+    },
     tripData: {},
     visaData: {
       turkey: {
@@ -267,6 +341,7 @@ export const translations = {
     nav: {
       destinations: "الوجهات",
       visaInfo: "معلومات التأشيرة",
+      services: "خدماتنا",
       bookNow: "احجز الآن"
     },
     hero: {
@@ -386,6 +461,42 @@ export const translations = {
       email: "mytravel.dz@gmail.com",
       hours: "السبت - الخميس: 09:00 - 18:00",
       rights: "جميع الحقوق محفوظة."
+    },
+    services: {
+      title: "خدماتنا",
+      learnMore: "معرفة المزيد",
+      items: [
+        {
+          title: "رحلة حسب الطلب",
+          desc: "«رحلتك، قواعدك!» قم بتخصيص كل التفاصيل وفقاً لتفضيلاتك...",
+          image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "النقل والجولات",
+          desc: "LAYA TRAVEL ترحب بكم بحرارة في المطار وتضمن نقلكم إلى مكان إقامتكم.",
+          image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "معالجة ملفات التأشيرة",
+          desc: "LAYA TRAVEL تسهل لكم الإجراءات الإدارية للحصول على تأشيراتكم في أسرع وقت ممكن.",
+          image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "خدمة العمرة",
+          desc: "LAYA TRAVEL تنظم رحلتكم المقدسة للعمرة مع مرشدينا ....",
+          image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "خدمة التذاكر",
+          desc: "LAYA TRAVEL تضمن لكم حجز تذاكر الطيران...",
+          image: "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          title: "رحلات منظمة",
+          desc: "LAYA TRAVEL تفتح لكم الآفاق لاستكشاف العالم",
+          image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
     },
     tripData: {},
     visaData: {

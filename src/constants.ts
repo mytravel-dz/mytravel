@@ -263,6 +263,136 @@ export const VISA_INFO: VisaInfo[] = [
     stay: '30 days',
     dossier: ['Copie de la 1ère page du passeport', '01 photo 5/5 fond blanc']
   },
+  {
+    id: 'ev12',
+    country: 'Saudi Arabia',
+    image: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '24-48 Hours',
+    category: 'evisa',
+    stay: '90 days'
+  },
+  {
+    id: 'ev13',
+    country: 'Kenya',
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=800',
+    type: 'ETA',
+    processingTime: '2-4 Days',
+    category: 'evisa',
+    stay: '30 days'
+  },
+  {
+    id: 'ev14',
+    country: 'Bahrain',
+    image: 'https://images.unsplash.com/photo-1549944850-84e00be4203b?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '3-5 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev15',
+    country: 'Sri Lanka',
+    image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800',
+    type: 'ETA',
+    processingTime: '24-48 Hours',
+    category: 'evisa'
+  },
+  {
+    id: 'ev16',
+    country: 'Vietnam',
+    image: 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '3-5 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev17',
+    country: 'Ethiopia',
+    image: 'https://images.unsplash.com/photo-1523841589119-b4a1f11ed7ee?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '1-3 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev18',
+    country: 'Japan',
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '5-10 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev19',
+    country: 'South Korea',
+    image: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&q=80&w=800',
+    type: 'K-ETA',
+    processingTime: '24-72 Hours',
+    category: 'evisa'
+  },
+  {
+    id: 'ev20',
+    country: 'Uzbekistan',
+    image: 'https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '3 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev21',
+    country: 'Tanzania',
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '5-10 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev22',
+    country: 'Malaysia',
+    image: 'https://images.unsplash.com/photo-1583201416955-4089c25608b4?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '2-4 Days',
+    category: 'evisa'
+  },
+  {
+    id: 'ev23',
+    country: 'Oman',
+    image: 'https://images.unsplash.com/photo-1571401835393-8c5f35328320?auto=format&fit=crop&q=80&w=800',
+    type: 'E-Visa',
+    processingTime: '24-48 Hours',
+    category: 'evisa'
+  },
+  {
+    id: 'v6',
+    country: 'United Kingdom',
+    image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=800',
+    type: 'Standard Visitor',
+    processingTime: '15-21 Days',
+    category: 'main'
+  },
+  {
+    id: 'v7',
+    country: 'United States',
+    image: 'https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&q=80&w=800',
+    type: 'B1/B2 Visa',
+    processingTime: 'Varies',
+    category: 'main'
+  },
+  {
+    id: 'v8',
+    country: 'Canada',
+    image: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&q=80&w=800',
+    type: 'Visitor Visa',
+    processingTime: 'Varies',
+    category: 'main'
+  },
+  {
+    id: 'v9',
+    country: 'Australia',
+    image: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&q=80&w=800',
+    type: 'Visitor Visa',
+    processingTime: '15-30 Days',
+    category: 'main'
+  },
 
   // Residence
   {

@@ -511,9 +511,9 @@ Date of Birth: ${appointmentForm.dob}
             {[
               { href: "#flights", label: "Book Fly" },
               { href: "#hotels", label: "Book Hotel" },
+              { href: "#services", label: (t as any).nav.services },
               { href: "#offers", label: t.nav.destinations },
-              { href: "#visa-info", label: t.nav.visaInfo },
-              { href: "#inquiry", label: (t as any).whatsapp.title }
+              { href: "#visa-info", label: t.nav.visaInfo }
             ].map((link) => (
               <a 
                 key={link.href}
@@ -611,9 +611,9 @@ Date of Birth: ${appointmentForm.dob}
                 {[
                   { href: "#flights", label: "Book Fly" },
                   { href: "#hotels", label: "Book Hotel" },
+                  { href: "#services", label: (t as any).nav.services },
                   { href: "#offers", label: t.nav.destinations },
-                  { href: "#visa-info", label: t.nav.visaInfo },
-                  { href: "#inquiry", label: (t as any).whatsapp.title }
+                  { href: "#visa-info", label: t.nav.visaInfo }
                 ].map((link, idx) => (
                   <motion.a 
                     key={link.href}
@@ -894,6 +894,67 @@ Date of Birth: ${appointmentForm.dob}
                 {(t as any).whatsapp.send}
               </button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Nos Services Section */}
+      <section id="services" className="py-24 px-6 bg-zinc-950/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-widest mb-6">
+              <Sparkles size={16} /> {(t as any).services.title}
+            </div>
+            <h2 className="font-sans text-4xl md:text-7xl font-bold uppercase tracking-tight mb-8">
+              {(t as any).services.title}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(t as any).services.items.map((service: any, idx: number) => {
+              const icons = [Sparkles, Users, FileText, Globe, Plane, MapPin];
+              const Icon = icons[idx % icons.length];
+              
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative flex flex-col bg-zinc-900/40 rounded-[2.5rem] overflow-hidden border border-white/10 hover:border-brand/50 transition-all duration-500 shadow-2xl backdrop-blur-sm h-full"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-60" />
+                    <div className="absolute bottom-6 left-8 flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-brand/90 backdrop-blur-md flex items-center justify-center text-white shadow-lg">
+                        <Icon size={20} />
+                      </div>
+                      <h3 className="text-xl font-bold text-white drop-shadow-lg">{service.title}</h3>
+                    </div>
+                  </div>
+
+                  <div className="p-8 flex-1 flex flex-col">
+                    <p className="text-white/50 leading-relaxed mb-6 text-sm group-hover:text-white/70 transition-colors">
+                      {service.desc}
+                    </p>
+                    
+                    <div className="mt-auto">
+                      <button className="flex items-center gap-2 text-brand font-bold uppercase tracking-widest text-[10px] group/btn">
+                        <span>{(t as any).services.learnMore}</span>
+                        <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -1504,7 +1565,7 @@ Date of Birth: ${appointmentForm.dob}
           </div>
 
           {/* Residence Services */}
-          <div>
+          <div className="mb-24">
             <div className="flex items-center gap-6 mb-16">
               <div className="h-px w-12 bg-brand" />
               <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white">Residence Services</h3>
@@ -1514,6 +1575,77 @@ Date of Birth: ${appointmentForm.dob}
               {VISA_INFO.filter(v => v.category === 'residence').map((visa, idx) => (
                 <VisaCard key={visa.id} visa={visa} idx={idx} setSelectedVisa={setSelectedVisa} setSelectedAppointmentVisa={setSelectedAppointmentVisa} t={t} />
               ))}
+            </div>
+          </div>
+
+          {/* Popular Visa Destinations Grid (from jsdbiz.com) */}
+          <div>
+            <div className="flex items-center gap-6 mb-16">
+              <div className="h-px w-12 bg-brand" />
+              <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white">Global Visa Destinations</h3>
+              <div className="h-px flex-1 bg-white/10" />
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {VISA_INFO.filter(v => !v.category || v.category === 'evisa' || v.category === 'main').map((visa, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  onClick={() => setSelectedVisa(visa)}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center cursor-pointer hover:border-brand/40 hover:bg-brand/5 transition-all group"
+                >
+                  <div className="w-10 h-10 mx-auto mb-3 rounded-full bg-brand/10 flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white transition-colors">
+                    <Globe size={18} />
+                  </div>
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">
+                    {visa.country}
+                  </h4>
+                  <p className="text-[8px] text-white/30 group-hover:text-brand/70 uppercase tracking-[0.2em] mt-1">
+                    {visa.type}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+            <div className="mt-12 text-center">
+              <p className="text-white/40 text-sm font-medium italic">
+                {lang === 'ar' ? 'نتوسع في المزيد من البلدان قريباً...' : lang === 'fr' ? 'Extension vers plus de pays bientôt...' : 'Expanding to more countries soon...'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Visa Services (based on jsdbiz.com philosophy) */}
+      <section className="py-24 px-6 bg-zinc-950 relative border-y border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-2xl bg-brand/10 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <ShieldCheck size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">Professional Assistance</h3>
+              <p className="text-white/40 text-sm leading-relaxed">
+                Expert support for your visa application with over 10 years of experience in global travel documentation.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-2xl bg-brand/10 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <Sparkles size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">Simplified Process</h3>
+              <p className="text-white/40 text-sm leading-relaxed">
+                We handle the complexity, providing you with a clear roadmap and handling all administrative procedures.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-2xl bg-brand/10 flex items-center justify-center text-brand mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <Globe size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">Transparent Services</h3>
+              <p className="text-white/40 text-sm leading-relaxed">
+                Clear pricing, realistic timelines, and constant updates on your application status.
+              </p>
             </div>
           </div>
         </div>
@@ -1714,12 +1846,14 @@ Date of Birth: ${appointmentForm.dob}
             </div>
           </div>
 
-          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-white/30 text-xs font-bold uppercase tracking-widest">
-            <p>© {new Date().getFullYear()} My Travel. {t.footer.rights}</p>
-            <div className="flex gap-8">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-6">
+              <div className="text-[10px] font-black uppercase tracking-widest text-white/30">In Partnership with</div>
+              <div className="text-xl font-black italic text-white/60 tracking-tighter">JsdBiz</div>
             </div>
+            <p className="text-white/30 text-[10px] font-medium max-w-md text-center md:text-right uppercase tracking-widest leading-loose">
+              © {new Date().getFullYear()} My Travel. Specialized in Worldwide Visa Assistance & Luxury Travel Experiences.
+            </p>
           </div>
         </div>
       </footer>
